@@ -1,3 +1,4 @@
+
 /*------------ MAKES AND POPULATES A 2D GRID WITH THE GIVEN AMOUNT OF COLUMNS AND ROWS ------------*/
 const make2DArray = (cols, rows) => {
     let arr = new Array(cols).fill();
@@ -25,6 +26,8 @@ const nextCell = (v, x, y, grid) => {
     let sum = 0
     let newValue;
     
+    /* Handling Conditions for edges and corners */
+
     /* --- Corners --- */
     
     // Top Left Corner
