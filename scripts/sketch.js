@@ -1,3 +1,5 @@
+
+/* ---------- SETUP ---------- */
 const resolution = 16;
 const gridWidth = 800;
 const gridHeight = 640;
@@ -40,3 +42,26 @@ function draw() {
 
     grid = generateNext(grid)
 }
+
+/* ---------- CONTROLS ---------- */
+const stopBtn = document.getElementById('stop')
+const resumeBtn = document.getElementById('resume')
+const resetBtn = document.getElementById('reset')
+const nextBtn = document.getElementById('nextgen')
+
+stopBtn.addEventListener('click', () => {
+    noLoop()
+})
+
+resumeBtn.addEventListener('click', () => {
+    loop()
+})
+
+nextBtn.addEventListener('click', () => {
+    draw()
+})
+
+resetBtn.addEventListener('click', () => {
+    grid = initialState
+    draw()
+})
